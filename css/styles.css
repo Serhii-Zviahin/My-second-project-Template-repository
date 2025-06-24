@@ -1,9 +1,79 @@
+*:focus:not(:focus-visible),
+*::before:focus:not(:focus-visible),
+*::after:focus:not(:focus-visible) {
+  outline: none;
+}
 body {
   background-color: #ffffe0; /* Light yellow background */
-  img {
-    display: block;
-    object-fit: cover;
-    max-width: 100%;
-    height: auto;
-  }
+  font-family: "Roboto", sans-serif; /* any font */
+  margin: 0;
+  padding: 0;
+}
+img {
+  display: block;
+  object-fit: cover;
+  max-width: 100%;
+  height: auto;
+}
+a {
+  text-decoration: none;
+  color: #22343d; /* any color */
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+ul,
+li {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+button {
+  cursor: pointer;
+  padding: 0;
+  font-family: inherit; /* if need same font as body */
+}
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  border: 0;
+  white-space: nowrap;
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+  overflow: hidden;
 }
